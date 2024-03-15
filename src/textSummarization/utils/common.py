@@ -6,7 +6,7 @@ from box.exceptions import BoxValueError
 from ensure import ensure_annotations
 from pathlib import Path
 
-from text_summarization.logging import logger
+from textSummarization.logging import logger
 
 @ensure_annotations
 def read_yaml(path_to_yaml:Path) -> ConfigBox:
@@ -43,7 +43,7 @@ def create_directories(path_to_directories:list, verbose=True):
     for path in path_to_directories:
         os.makedirs(path, exist_ok=True)
         if verbose:
-            logger.info(f"Created directorie ar: {path}")
+            logger.info(f"Created directory at: {path}")
 
 @ensure_annotations
 def get_size(path:Path) -> str:
